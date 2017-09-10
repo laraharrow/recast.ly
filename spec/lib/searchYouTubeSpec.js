@@ -67,10 +67,11 @@ describe('searchYouTube', function() {
   // Same shape means that the data should have the same keys, nested the same way as `exampleVideoData`,
   // though it will not necessarily have the same values.
   it('should GET videos with the same shape as `exampleVideoData`', function(done) {
+    console.log('this is the key: ', window.YOUTUBE_API_KEY);
     var options = {
       key: window.YOUTUBE_API_KEY,
       query: 'react',
-      max: 5
+      max: 5,
     };
 
     // We want this test to make a real AJAX request

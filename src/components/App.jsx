@@ -6,8 +6,13 @@ class App extends React.Component {
       currentVideo: window.exampleVideoData[0]
     };
     this.handleVideoTitleClick = this.handleVideoTitleClick.bind(this);
+    this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
   }
     
+  getYouTubeVideos(query) {
+    
+  }
+
   handleVideoTitleClick(video) {
     this.setState({
       currentVideo: video
@@ -20,7 +25,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><h5><em>search</em> view goes here</h5></div>
+            <Search />
           </div>
         </nav>
         <div className="row">
